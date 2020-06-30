@@ -9,8 +9,15 @@ class DatabaseSeeder extends Seeder
      *
      * @return void
      */
+    //Если ошибка подключения класса юзай composer dump-autoload
     public function run()
     {
-        // $this->call(UserSeeder::class);
+        $this->call([
+            //RoleSeeder::class,
+            //StatusesSeeder::class,
+            //TaskTypeSeeder::class,
+            //TeamSeeder::class
+            TaskSeeder::class
+        ]);
     }
 }
